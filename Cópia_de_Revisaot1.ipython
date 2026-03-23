@@ -1,0 +1,290 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/rafaelaparecidoestevs-boop/Curso---git---2025/blob/main/C%C3%B3pia_de_Revisaot1.ipython\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Revisao Python"
+      ],
+      "metadata": {
+        "id": "2QnVtnnofy_g"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "collapsed": true,
+        "id": "a3Ci5HxJfuif",
+        "outputId": "69318ca4-da44-425f-94d6-76f5a2bc5b39"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite seu nome: Allan\n",
+            "Digite sua idade: 50\n",
+            "Digite sua altura: 1.7\n",
+            "Olá, Allan!\n",
+            "Você tem 50 anos e mede 1.70\n",
+            "<class 'str'>\n",
+            "<class 'int'>\n",
+            "<class 'float'>\n"
+          ]
+        }
+      ],
+      "source": [
+        "#R1 - Variaveis, tipos, saida e entrada\n",
+        "nome = input(\"Digite seu nome: \")\n",
+        "idade = int(input(\"Digite sua idade: \"))\n",
+        "altura = float(input(\"Digite sua altura: \"))\n",
+        "print(f\"Olá, {nome}!\")\n",
+        "print(f\"Você tem {idade} anos e mede {altura:.2f}\")\n",
+        "print(type(nome))\n",
+        "print(type(idade))\n",
+        "print(type(altura))"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#R2 - Operadores aritméticos e comparação\n",
+        "num1 = float(input(\"Digite o primeiro número: \"))\n",
+        "num2 = float(input(\"Digite o segundo número: \"))\n",
+        "print(f\"Soma: {num1 + num2}\")\n",
+        "print(f\"Subtração: {num1 - num2}\")\n",
+        "print(f\"Multiplicação: {num1 * num2}\")\n",
+        "print(f\"Divisão: {num1 / num2}\")\n",
+        "print(num1 > num2) # True se for n1 > n2\n",
+        "print(num1 < num2) # True se for n1 < n2\n",
+        "print(num1 >= num2) # True se n1 >= n2\n",
+        "print(num1 <= num2) # True se n1 <= n2\n",
+        "print(num1 == num2) # True se n1 == n2"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "collapsed": true,
+        "id": "vz81WP-7iuZe",
+        "outputId": "3287cb2e-44d3-4148-b319-83f70671d4e3"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite o primeiro número: 10\n",
+            "Digite o segundo número: 2\n",
+            "Soma: 12.0\n",
+            "Subtração: 8.0\n",
+            "Multiplicação: 20.0\n",
+            "Divisão: 5.0\n",
+            "True\n",
+            "False\n",
+            "True\n",
+            "False\n",
+            "False\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#R3 -Condicional if, elil, else\n",
+        "nota1 = float(input(\"Digite a primeira nota: \"))\n",
+        "nota2 = float(input(\"Digite a segunda nota: \"))\n",
+        "media = (nota1 + nota2) / 2\n",
+        "print(f\"Média: {media:.2f}\")\n",
+        "if media >= 7:\n",
+        "  print(\"Aprovado\")\n",
+        "elif media >=5:\n",
+        "  print(\"Recuperação\")\n",
+        "else:\n",
+        "  print(\"Reprovado\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "collapsed": true,
+        "id": "9ML02XsKkE02",
+        "outputId": "9cefac0a-866c-4bbc-c328-e2280d8bc973"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite a primeira nota: 8\n",
+            "Digite a segunda nota: 5\n",
+            "Média: 6.50\n",
+            "Recuperação\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#R4 - for\n",
+        "numero = int(input(\"Digite um número para ver a tabuada: \"))\n",
+        "for i in range(1,11):\n",
+        "  print(f\"{numero} X {i} = {numero * i}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "collapsed": true,
+        "id": "3pimX6F7lUXo",
+        "outputId": "226ebd36-d41d-413d-f837-648abd4ff13a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite um número para ver a tabuada: 7\n",
+            "7 X 1 = 7\n",
+            "7 X 2 = 14\n",
+            "7 X 3 = 21\n",
+            "7 X 4 = 28\n",
+            "7 X 5 = 35\n",
+            "7 X 6 = 42\n",
+            "7 X 7 = 49\n",
+            "7 X 8 = 56\n",
+            "7 X 9 = 63\n",
+            "7 X 10 = 70\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#R5 - while\n",
+        "senha = \"\"\n",
+        "while senha !=\"1234\":\n",
+        "  senha = input(\"Digite a senha: \")\n",
+        "print(\"Acesso permitido\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "collapsed": true,
+        "id": "4KImT6WpmH7J",
+        "outputId": "25cc37b1-d324-4089-dec3-e19b4654efed"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite a senha: a\n",
+            "Digite a senha: 1234\n",
+            "Acesso permitido\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#R6 - Listas, tuplas, dicionarios e conjuntos\n",
+        "Lista = [1,2,3,4,5]\n",
+        "Tupla = (1,2,3,4,5)\n",
+        "Dicionario = {\"nome\": \"João\", \"idade\": 20, \"chave\":\"valor\"}\n",
+        "Conjunto = {1,2,3,4,5}\n",
+        "print(type(Lista))\n",
+        "print(type(Tupla))\n",
+        "print(type(Dicionario))\n",
+        "print(type(Conjunto))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "collapsed": true,
+        "id": "Vj3uj_rRmmcy",
+        "outputId": "dee1afb4-feda-4960-c0e3-3d6ef27cde62"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class 'list'>\n",
+            "<class 'tuple'>\n",
+            "<class 'dict'>\n",
+            "<class 'set'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#R7 - Função simples\n",
+        "def saudacao(nome):\n",
+        "  print(f\"Olá, {nome}!\")\n",
+        "\n",
+        "nome = input(\"Digite seu nome:\")\n",
+        "saudacao(nome)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "hFjstSTJnjZS",
+        "outputId": "6296866a-7a3a-491a-e524-9af27cb782c6"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite seu nome:Allan\n",
+            "Olá, Allan!\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
